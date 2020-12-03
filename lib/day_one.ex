@@ -1,7 +1,7 @@
 defmodule DayOne do
-  def part_1(), do: read_input() |> do_part_1()
+  def part_1, do: read_input() |> do_part_1()
 
-  def part_2(), do: read_input() |> do_part_2()
+  def part_2, do: read_input() |> do_part_2()
 
   # Result is 927684
   defp do_part_1(input) do
