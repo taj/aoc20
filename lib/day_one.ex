@@ -1,9 +1,10 @@
 defmodule DayOne do
+  # Result is 927684
   def part_1, do: read_input() |> do_part_1()
 
+  # Result is 292093004
   def part_2, do: read_input() |> do_part_2()
 
-  # Result is 927684
   defp do_part_1(input) do
     matches =
       for a <- input, b <- input do
@@ -17,7 +18,6 @@ defmodule DayOne do
     |> hd()
   end
 
-  # Result is 292093004
   defp do_part_2(input) do
     matches =
       for a <- input, b <- input, c <- input do
@@ -34,8 +34,8 @@ defmodule DayOne do
   defp read_input() do
     "lib/inputs/day_one"
     |> File.read!()
+    |> String.trim()
     |> String.split("\n")
-    |> Enum.reject(&(&1 == ""))
     |> Enum.map(&String.to_integer/1)
   end
 end
