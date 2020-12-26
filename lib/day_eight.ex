@@ -68,7 +68,7 @@ defmodule DayEight do
   end
 
   defp replace_cmd(cmds, index, to, arg) do
-    cmds = List.replace_at(cmds, index, {to, arg, false})
+    List.replace_at(cmds, index, {to, arg, false})
   end
 
   defp halt_or_continue({_, true}), do: {:cont, nil}
